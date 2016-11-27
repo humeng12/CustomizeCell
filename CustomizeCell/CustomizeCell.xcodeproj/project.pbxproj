@@ -17,6 +17,8 @@
 		6B00118A1DEAA2AA002501DF /* CustomizeCellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0011891DEAA2AA002501DF /* CustomizeCellUITests.m */; };
 		6B0011981DEAA472002501DF /* tgs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0011971DEAA472002501DF /* tgs.plist */; };
 		6B0AD6CF1DEAA50D00B7CBCF /* HMTg.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0AD6CE1DEAA50D00B7CBCF /* HMTg.m */; };
+		6B0AD6D81DEAA68500B7CBCF /* HMTgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0AD6D61DEAA68500B7CBCF /* HMTgCell.m */; };
+		6B0AD6D91DEAA68500B7CBCF /* HMTgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0AD6D71DEAA68500B7CBCF /* HMTgCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		6B0011971DEAA472002501DF /* tgs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tgs.plist; sourceTree = "<group>"; };
 		6B0AD6CD1DEAA50D00B7CBCF /* HMTg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMTg.h; sourceTree = "<group>"; };
 		6B0AD6CE1DEAA50D00B7CBCF /* HMTg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMTg.m; sourceTree = "<group>"; };
+		6B0AD6D51DEAA68500B7CBCF /* HMTgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMTgCell.h; sourceTree = "<group>"; };
+		6B0AD6D61DEAA68500B7CBCF /* HMTgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMTgCell.m; sourceTree = "<group>"; };
+		6B0AD6D71DEAA68500B7CBCF /* HMTgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMTgCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,9 @@
 				6B00116B1DEAA2AA002501DF /* ViewController.m */,
 				6B0AD6CD1DEAA50D00B7CBCF /* HMTg.h */,
 				6B0AD6CE1DEAA50D00B7CBCF /* HMTg.m */,
+				6B0AD6D51DEAA68500B7CBCF /* HMTgCell.h */,
+				6B0AD6D61DEAA68500B7CBCF /* HMTgCell.m */,
+				6B0AD6D71DEAA68500B7CBCF /* HMTgCell.xib */,
 				6B00116D1DEAA2AA002501DF /* Main.storyboard */,
 				6B0011701DEAA2AA002501DF /* Assets.xcassets */,
 				6B0011721DEAA2AA002501DF /* LaunchScreen.storyboard */,
@@ -256,6 +264,7 @@
 			files = (
 				6B0011741DEAA2AA002501DF /* LaunchScreen.storyboard in Resources */,
 				6B0011981DEAA472002501DF /* tgs.plist in Resources */,
+				6B0AD6D91DEAA68500B7CBCF /* HMTgCell.xib in Resources */,
 				6B0011711DEAA2AA002501DF /* Assets.xcassets in Resources */,
 				6B00116F1DEAA2AA002501DF /* Main.storyboard in Resources */,
 			);
@@ -282,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0AD6D81DEAA68500B7CBCF /* HMTgCell.m in Sources */,
 				6B00116C1DEAA2AA002501DF /* ViewController.m in Sources */,
 				6B0AD6CF1DEAA50D00B7CBCF /* HMTg.m in Sources */,
 				6B0011691DEAA2AA002501DF /* AppDelegate.m in Sources */,

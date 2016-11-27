@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "HMTg.h"
+#import "HMTgCell.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *tgs;
 
@@ -52,8 +55,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 设置每一行cell的高度
+    self.tableView.rowHeight = 80;
     
 }
+
+
+#pragma mark - 数据源方法
+/**
+ *  一共有多少行数据
+ */
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.tgs.count;
+}
+
+/**
+ *  每一行显示怎样的cell
+ */
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 1.创建cell
+    HMTgCell *cell = [HMTgCell cellWithTableView:tableView];
+    
+    // 2.给cell传递模型数据
+    cell.tg = self.tgs[indexPath.row];
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
