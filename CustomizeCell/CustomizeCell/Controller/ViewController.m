@@ -9,12 +9,14 @@
 #import "ViewController.h"
 #import "HMTg.h"
 #import "HMTgCell.h"
+#import "MJTgFooterView.h"
+#import "MJTgHeaderView.h"
 
 @interface ViewController ()<UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) NSArray *tgs;
+@property (nonatomic, strong) NSMutableArray *tgs;
 
 @end
 
@@ -58,7 +60,37 @@
     // 设置每一行cell的高度
     self.tableView.rowHeight = 80;
     
+    // 设置headerView
+    self.tableView.tableHeaderView = [MJTgHeaderView headerView];
+    
+    // 设置footerView
+    MJTgFooterView *footer = [MJTgFooterView footerView];
+    self.tableView.tableFooterView = footer;
+    
 }
+
+
+
+#pragma mark - MJTgFooterViewDelegate方法
+/**
+ *  加载更多的数据
+ */
+- (void)tgFooterViewDidClickedLoadBtn:(MJTgFooterView *)tgFooterView
+{
+#warning 正常开发:发送网络请求给远程的服务器
+    // 1.添加更多的模型数据
+    HMTg *tg = [[HMTg alloc] init];
+    tg.icon = @"ad_01";
+    tg.title = @"新增加的团购数据..";
+    tg.price = @"100";
+    tg.buyCount = @"0";
+    [self.tgs addObject:tg];
+    
+    // 2.刷新表格(告诉tableView重新加载模型数据, 调用tableView的reloadData)
+    [self.tableView reloadData];
+}
+
+
 
 
 #pragma mark - 数据源方法
